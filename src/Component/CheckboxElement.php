@@ -1,12 +1,12 @@
 <?php
 
-namespace Lagdo\UiBuilder\Bootstrap5\Element;
+namespace Lagdo\UiBuilder\Bootstrap5\Component;
 
 use Lagdo\UiBuilder\Builder\Html\Element;
-use Lagdo\UiBuilder\Element\Html\RadioElement as BaseElement;
-use Lagdo\UiBuilder\Element\Html\InputGroupElement;
+use Lagdo\UiBuilder\Component\Html\CheckboxElement as BaseElement;
+use Lagdo\UiBuilder\Component\Html\InputGroupElement;
 
-class RadioElement extends BaseElement
+class CheckboxElement extends BaseElement
 {
     /**
      * @return void
@@ -14,7 +14,7 @@ class RadioElement extends BaseElement
     protected function onCreate(): void
     {
         $this->addBaseClass('form-check-input');
-        $this->setAttribute('type', 'radio');
+        $this->setAttribute('type', 'checkbox');
     }
 
     /**

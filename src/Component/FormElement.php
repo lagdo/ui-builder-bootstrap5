@@ -1,8 +1,8 @@
 <?php
 
-namespace Lagdo\UiBuilder\Bootstrap5\Element;
+namespace Lagdo\UiBuilder\Bootstrap5\Component;
 
-use Lagdo\UiBuilder\Element\Html\FormElement as BaseElement;
+use Lagdo\UiBuilder\Component\Html\FormElement as BaseElement;
 
 class FormElement extends BaseElement
 {

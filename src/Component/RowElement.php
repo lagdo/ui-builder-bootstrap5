@@ -1,8 +1,8 @@
 <?php
 
-namespace Lagdo\UiBuilder\Bootstrap5\Element;
+namespace Lagdo\UiBuilder\Bootstrap5\Component;
 
-use Lagdo\UiBuilder\Element\Html\RowElement as BaseElement;
+use Lagdo\UiBuilder\Component\Html\RowElement as BaseElement;
 
 class RowElement extends BaseElement
 {
