@@ -3,19 +3,22 @@
 namespace Lagdo\UiBuilder\Bootstrap5\Component;
 
 use Lagdo\UiBuilder\Component\Attr\SizeEnum;
-use Lagdo\UiBuilder\Component\Base\ButtonComponent as BaseComponent;
+use Lagdo\UiBuilder\Component\Base\DropdownButtonComponent as BaseComponent;
 
-use function is_a;
-
-class ButtonComponent extends BaseComponent
+class DropdownButtonComponent extends BaseComponent
 {
     /**
-     * @return void
+     * @inheritDoc
      */
     protected function onCreate(): void
     {
         $this->element()->addBaseClass('btn')
-            ->setAttribute('type', 'button');
+            ->addClass('dropdown-toggle')
+            ->setAttributes([
+                'type' => 'button',
+                'data-bs-toggle' => 'dropdown',
+                'aria-expanded' => 'false',
+            ]);
     }
 
     /**
@@ -35,11 +38,6 @@ class ButtonComponent extends BaseComponent
             $this->element()->addClass('btn-sm');
             break;
         default:
-        }
-
-        if ($this->prop('fullWidth', false) &&
-            !is_a($this->parent(), ButtonGroupComponent::class)) {
-            $this->element()->addClass('w-100');
         }
     }
 }
