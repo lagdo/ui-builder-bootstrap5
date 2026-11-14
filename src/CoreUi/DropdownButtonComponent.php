@@ -14,7 +14,6 @@ class DropdownButtonComponent extends BaseComponent
     protected function onCreate(): void
     {
         $this->addBaseClass('btn')
-            ->addClass('dropdown-toggle')
             ->setAttributes([
                 'type' => 'button',
                 'data-coreui-toggle' => 'dropdown',
